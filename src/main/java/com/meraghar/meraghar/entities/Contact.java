@@ -1,13 +1,13 @@
 package com.meraghar.meraghar.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "CONTACT")
 public class Contact {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int cid;
     private String name;
     private String secondName;
@@ -15,8 +15,9 @@ public class Contact {
     private String email;
     private String phone;
     private String image;
-
-    @Column(length = 5000)
+    @ManyToOne
+    private User user;
+    @Column(length = 500)
     private String description;
 
 
@@ -82,5 +83,13 @@ public class Contact {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

@@ -1,9 +1,8 @@
 package com.meraghar.meraghar.entities;
 
-import antlr.collections.List;
-
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="USER")
@@ -22,8 +21,8 @@ public class User {
     @Column(length = 500)
     private String about;
 
-   @OneToMany(cascade = CascadeType.ALL, fa)
-    private List<Contact> contactList=new ArrayList<>();
+   @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    private List<Contact> contact=new ArrayList<>();
 
     public User() {
         super();
@@ -93,12 +92,12 @@ public class User {
     public void setAbout(String about) {
         this.about = about;
     }
-    public List<Contact> getContactList() {
-        return contactList;
+    public java.util.List<Contact> getContact() {
+        return contact;
     }
 
-    public void setContactList(List<Contact> contactList) {
-        this.contactList = contactList;
+    public void setContactList(java.util.List<Contact> contact) {
+        this.contact = contact;
     }
 
 
