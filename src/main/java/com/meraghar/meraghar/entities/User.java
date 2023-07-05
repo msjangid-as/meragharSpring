@@ -17,6 +17,15 @@ public class User {
     private String role;
     private boolean isActive;
     private String image;
+    private String username;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
     @Column(length = 500)
     private String about;
@@ -100,5 +109,19 @@ public class User {
         this.contact = contact;
     }
 
-
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", role='" + role + '\'' +
+                ", isActive=" + isActive +
+                ", image='" + image + '\'' +
+                ", username='" + username + '\'' +
+                ", about='" + about + '\'' +
+                ", contact=" + contact +
+                '}';
+    }
 }

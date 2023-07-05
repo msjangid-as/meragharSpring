@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>Sakha</artifactId>
+	<artifactId>meraghar</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Sakha</name>
-	<description>Sakha</description>
+	<name>meraghar</name>
+	<description>meraghar</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -66,14 +66,15 @@
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
-			<version>5.9.2</version>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-test</artifactId>
-			<version>3.0.6</version>
-			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
 		</dependency>
 	</dependencies>
 
